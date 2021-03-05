@@ -1,0 +1,4 @@
+{# About template #} {% extends "_layout" %} {% set pageTitle = entry.pageSeoTitle %} {% set description = '' %} {% set pageID = "about" %} {% block content %} <h1 class="heading">{{ entry.pageTitle }}</h1>
+<div class="description">
+    {{ entry.pageContent }}
+</div> {% set personDirectory = entry.personDirectory.all() %} {% if personDirectory|length %} <ul id="personDirectory"> {% for entry in personDirectory %} {% include '_personSyndicated' %} {% endfor %} </ul> {% endif %} {% endblock %}

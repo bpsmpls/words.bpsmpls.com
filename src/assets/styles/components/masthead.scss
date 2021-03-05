@@ -4,7 +4,7 @@
 header#masthead {
 	align-items: center;
 	//background: #f4ff47;
-	border-bottom: 1px solid @gray;
+	border-bottom: 1px solid var(--color-gray);
 	background: var(--main-bg-color);
 	//background-size: cover;
 	//color: var(--main-bg-color);
@@ -17,7 +17,7 @@ header#masthead {
 
 	a {
 		border: none;
-		color: @black;
+		color: var(--color-black);
 
 		&:hover {
 			background: none;
@@ -49,12 +49,12 @@ header#masthead {
 			position: relative;
 
 			&:before {
-				@size:3px;
+				$size: 3px;
 				background: var(--color-red);
-				bottom: (@size * -1);
+				bottom: ($size * -1);
 				content: ' ';
 				display: block;
-				height: @size;
+				height: $size;
 				position: absolute;
 				transition: bottom 0.1s ease-out;
 				width: 100%;

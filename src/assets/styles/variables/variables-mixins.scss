@@ -87,3 +87,8 @@ $screenSize-lg: 60em;
 	@include fill-max-width;
 	width: 100%; 
 }
+
+@mixin clip-path($clip) {
+	-webkit-clip-path: $clip;
+	clip-path: $clip;
+}

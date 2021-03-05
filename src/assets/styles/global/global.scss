@@ -50,7 +50,7 @@ a {
 			top: 0;
 			transition: 0.4s;
 			width: 0px;
-			.clip-path(polygon(2% 0, 100% 0, 98% 100%, 0 100%));
+			@include clip-path( polygon(2% 0, 100% 0, 98% 100%, 0 100%) );
 		}
 	
 		&:hover {
