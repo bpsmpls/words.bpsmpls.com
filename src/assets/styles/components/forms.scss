@@ -1,0 +1,23 @@
+// Form elements
+// --------------------------------------------------
+
+form {}
+
+label {
+	display: block;
+}
+
+input,
+textarea {
+	display: block;
+	font-size: 1em;
+	line-height: 1.2;
+	padding: 0.25em 0.5em;
+	width: auto;
+}
+
+input {}
+
+textarea {}
+
+button[type=submit] {}

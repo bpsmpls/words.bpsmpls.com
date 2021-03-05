@@ -1,0 +1,89 @@
+/* Variables / Mixins
+--------------------------*/
+
+// Viewport Sizes
+$screenSize-sm: 42.5em;
+$screenSize-md: 48em;
+$screenSize-lg: 60em;
+
+:root {
+	// Colors - Grays
+	--color-black:       #000;
+	--color-grayDark:    #333;
+	--color-gray:        #555;
+	--color-grayLight:   #d8d8d8;
+	--color-grayLighter: #e8e8e8;
+	--color-white:       #fff;
+
+	// Colors - Bold
+	--color-red:   rgb(255, 99, 71);
+	--color-red75: rgba(255, 99, 71, 0.75);
+
+	// Fonts / Text
+	--fontFamily-serif:     'Otama', 'Bodoni', serif;
+	--fontFamily-sans:      'Open Sans', Helvetica, sans-serif;
+	--fontFamily-cond-sans: 'Open Sans Condensed', Impact, sans-serif;
+
+	// Font Weights
+	--fontWeight-thin:     100;
+	--fontWeight-light:    300;
+	--fontWeight-regular:  400;
+	--fontWeight-bold:     700;
+	--fontWeight-black:    800;
+
+	// Z-Index
+	--zIndex-header: 100;
+
+	// Global Elements
+	--mastheadHeight: 5em;
+
+	// Main Theme
+	--main-bgColor:     var(--color-grayLighter);
+	--main-textColor:   var(--color-grayDark);
+	--main-brandColor:  var(--color-violet);
+	--header-bgColor:   var(--color-white);
+
+	--linkColor:        var(--color-grayDark);
+	--linkColor-active: var(--color-violet);
+
+	--window-xPadding:      1em;
+	--entryDetail-padding:  1em;
+	--roundedCornersRadius: 3px;
+	--main-dropShadow:      0 2px 4px rgba(0,0,0,0.25);
+}
+
+// Mixins
+// -----------------------
+
+// Responsive Video
+@mixin flex_video() {
+	figure.video {
+		margin-bottom: 1em;
+		
+		.wrap {
+			height: 0;
+			padding-bottom: 56.25%; /* 16: 9 */
+			padding-top: 25px;
+			position: relative;
+		}
+		iframe, object, embed, video {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
+}
+
+// Images
+@mixin fill-max-width() {
+	display: block;
+	height: auto; 
+	max-width: 100%; 
+}
+
+@mixin fill-width() {
+	@include fill-max-width;
+	width: 100%; 
+}

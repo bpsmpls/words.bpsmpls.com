@@ -1,0 +1,17 @@
+// Section: Colophon
+// --------------------------------------------------
+
+#colophon {
+	background-color: var(--color-black);
+	color: var(--color-gray);
+	padding: 2vw 1vw;
+
+	a {
+		color: var(--linkColor);
+	}
+
+	p {
+		margin: 2em 0;
+		text-align: center;
+	}
+}

@@ -1,0 +1,63 @@
+{#
+ # Syndicated Person
+ # ---------------
+ # Template for when people are shown in a  grouped grid
+ #}
+
+{% set thumb = {
+    mode: 'crop',
+    width: 120,
+    height: 120,
+    quality: 80,
+    position: 'center-center'
+} %}
+
+{% set lowResThumb = {
+    mode: 'crop',
+    width: 2,
+    height: 2,
+    quality: 80,
+    position: 'center-center'
+} %}
+
+
+<li id="{{ entry.slug }}" class="personSyndicated">
+    <header>
+        <figure class="personSyndicated_profilePicture">
+            {% set imgs = entry.personProfilePicture %}
+            {% if imgs|length %}
+                {% for img in imgs %}
+                    <img 
+                         src="{{ img.getUrl(lowResThumb) }}" 
+                         data-lowsrc="{{ img.getUrl(lowResThumb) }}" 
+                         data-src="{{ img.getUrl(thumb) }}" 
+                         alt="{{ img.title }}" 
+                         class="personSyndicated_featuredPhoto_img lazyload blur-up">
+
+                    <noscript>
+                        <img src="{{ img.getUrl(thumb) }}" alt="{{ img.title }}" class="personSyndicated_featuredPhoto_img">
+                    </noscript>
+                {% endfor %}
+            {% else %}
+                {% from "/components/shared/_macros" import missingImage %}
+                {{ missingImage('syndicated') }}
+            {% endif %}
+        </figure>
+        <hgroup>
+            {% if entry.personFullName|length %}
+                <h2 class="personSyndicated_heading">{{ entry.personFullName }}</h2>
+            {% endif %}
+            {% if entry.personPronouns|length %}
+                <h3 class="personSyndicated_pronouns">{{ entry.personPronouns }}</h3>
+            {% endif %}
+            {% if entry.personRole|length %}
+                <h4 class="personSyndicated_role">{{ entry.personRole }}</h4>
+            {% endif %}
+        </hgroup>
+    </header>
+    {% if entry.personBio|length %}
+        <div class="personSyndicated_bio">
+            {{ entry.personBio }}
+        </div>
+    {% endif %}
+</li>

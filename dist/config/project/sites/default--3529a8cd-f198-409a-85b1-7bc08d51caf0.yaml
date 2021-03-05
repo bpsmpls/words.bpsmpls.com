@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: 'Words by bps'
+primary: true
+siteGroup: 48760cd7-a89b-4e19-8834-bf2d1488fd7a # Words by bps
+sortOrder: 1

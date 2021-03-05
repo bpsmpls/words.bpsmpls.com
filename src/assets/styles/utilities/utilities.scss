@@ -1,0 +1,32 @@
+// Utilities
+@mixin isVisuallyHidden {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important;
+};
+
+@mixin isHidden {
+    display: none !important;
+}
+
+.u-isVisuallyHidden {
+    @include isVisuallyHidden;
+}
+
+.u-isHidden {
+    @include isHidden;
+}
+
+.paddedContent {
+    background-color: var(--color-white);
+    padding: var(--entryDetail-padding);
+}
+
+.borderBottom {
+    border-bottom: 1px solid var(--color-grayLight);
+}

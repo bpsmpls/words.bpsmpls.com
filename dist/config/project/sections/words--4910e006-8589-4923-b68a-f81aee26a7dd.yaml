@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: words
+name: Words
+propagationMethod: all
+siteSettings:
+  3529a8cd-f198-409a-85b1-7bc08d51caf0: # Words by bps
+    enabledByDefault: true
+    hasUrls: true
+    template: words/_entry
+    uriFormat: 'words/{slug}'
+type: channel
