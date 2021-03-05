@@ -1,0 +1,12 @@
+{#
+ # Words syndicated entry
+ # ---------------
+ # Template for showing a syndicated Words entry
+ #} <li id="{{ entry.slug }}" class="wordsSyndicated">
+    <h2 class="wordsSyndicated_heading">
+        <a href="/{{ categorySlug }}/{{ entry.slug}}">
+        {{ entry.title }}
+        </a>
+    </h2>
+    <time datetime="Y-m-d H:i">{{ entry.postDate | date("M d, Y") }}</time>
+</li>
