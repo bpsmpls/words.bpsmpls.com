@@ -7,7 +7,7 @@
 {% extends "_layout" %}
 {% set pageTitle = 'assorted writing by bps' %}
 {% set description = '' %}
-{% set categorySlug = craft.app.request.getSegment(2) %}
+{% set categorySlug = craft.app.request.getSegment(1) %}
 {% set category = craft.categories.slug(categorySlug) %}
 {% set pageID = categorySlug %}
 
