@@ -1,0 +1,35 @@
+// Section header styling
+// --------------------------------------------------
+
+.sectionHeader {
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.sectionHeader_heading {
+	font: 4em/1 var(--fontFamily-serif);
+}
+
+.sectionHeader_subheading {
+	font: var(--fontWeight-regular) 0.625em/1rem var(--fontFamily-sans);
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+
+	&:before,
+	&:after {
+		border-top: 1px solid var(--main-textColor);
+		content: '';
+		display: inline-block;
+		margin: 0 1em 0.25em;
+		width: 3vw;
+	}
+}
+
+@media (min-width: 60em) {
+	.pageHeader_heading {
+		font-size: 5vw;
+	}
+	.pageHeader_subheading {
+		font-size: 1vw;
+	}
+}

@@ -28,13 +28,13 @@ fieldLayouts:
             width: 100
         name: Content
         sortOrder: 1
-handle: contentType
-name: 'Content Type'
+handle: Category
+name: Category
 siteSettings:
   3529a8cd-f198-409a-85b1-7bc08d51caf0: # Words by bps
     hasUrls: true
     template: category
-    uriFormat: 'category/{slug}'
+    uriFormat: '{slug}'
 structure:
   maxLevels: null
   uid: e94bfc25-f8c9-42f1-8505-8bb84304952d

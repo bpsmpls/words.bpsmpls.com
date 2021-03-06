@@ -1,0 +1,26 @@
+// Page header styling
+// --------------------------------------------------
+
+.pageHeader {
+	display: block;
+	margin: 2em 0 2em;
+}
+
+.pageHeader_heading {
+	font: 3em/1 var(--fontFamily-serif);
+}
+
+.pageHeader_subheading {
+	font: var(--fontWeight-regular) 0.625em/1rem var(--fontFamily-sans);
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+
+	&:before,
+	&:after {
+		border-top: 1px solid var(--main-textColor);
+		content: '';
+		display: inline-block;
+		margin: 0 1em 0.25em;
+		width: 3vw;
+	}
+}
