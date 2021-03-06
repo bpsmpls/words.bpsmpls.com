@@ -12,6 +12,7 @@ import notify from './notify';
 function watchMedia() {
     const src = [
         `${process.env.DIRECTORY_SRC}/assets/favicon/**/*`,
+        `${process.env.DIRECTORY_SRC}/assets/fonts/**/*`,
         `${process.env.DIRECTORY_SRC}/assets/templateImgs/**/*`,
     ];
     gulp.watch(src, () => {
@@ -24,6 +25,7 @@ function buildMedia() {
     const browser = browserSync.get('local');
     const src = [
         `${process.env.DIRECTORY_SRC}/assets/favicon/**/*`,
+        `${process.env.DIRECTORY_SRC}/assets/fonts/**/*`,
         `${process.env.DIRECTORY_SRC}/assets/templateImgs/**/*`,
     ];
 
