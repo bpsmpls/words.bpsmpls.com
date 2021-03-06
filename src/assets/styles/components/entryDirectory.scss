@@ -1,20 +1,8 @@
 // Entry Directory
 // --------------------------------------------------
 
-:root {
-	--entryDirectory-gridPadding: 1em;
-}
-
 #entryDirectory {
 	list-style: none;
 	margin: 0;
-	padding: var(--entryDirectory-gridPadding);
-}
-
-@supports (display: grid) {
-	#entryDirectory {
-		display: grid;
-		grid-gap: var(--entryDirectory-gridPadding);
-		grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
-	}
+	padding: 0;
 }

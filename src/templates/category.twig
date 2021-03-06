@@ -12,11 +12,14 @@
 {% set pageID = categorySlug %}
 
 {% block content %}	
-	<h1 class="heading">{{ categorySlug }}</h1>
+	<header>
+		<h2 class="subheading">Work</h2>
+		<h1 class="heading">{{ categorySlug }}</h1>
+	</header>
 
 	{% set entries = craft.entries.section('words').relatedTo(category).find() %}
 	{% if entries|length %}
-		<ul class="entries">
+		<ul id="entryDirectory">
 			{% for entry in entries %}
 				{% include '_entrySyndicated' with { 'categorySlug' : categorySlug } %}
 			{% endfor %}

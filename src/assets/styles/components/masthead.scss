@@ -16,12 +16,8 @@ header#masthead {
 	z-index: 999;
 
 	a {
-		border: none;
 		color: var(--color-black);
-
-		&:hover {
-			background: none;
-		}
+		text-decoration: none;
 	}
 
 	a.site-title {

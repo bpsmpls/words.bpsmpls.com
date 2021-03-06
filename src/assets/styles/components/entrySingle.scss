@@ -1,0 +1,12 @@
+// Full-displayed Entry
+// --------------------------------------------------
+
+.entrySingle {
+	a {
+		@include link-style-highlighted();
+	}
+	
+}
+.entrySingle_heading {
+	
+}

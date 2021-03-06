@@ -1,46 +1,32 @@
 // Syndicated Entries
 // --------------------------------------------------
 
-:root { 
-	--entrySyndicated-bgColor: var(--color-white);
-	--entrySyndicated-padding: 1em;
-	--entrySyndicated-photoMargin: 0.5em;
-}
-
 .entrySyndicated {
-	background: var(--entrySyndicated-bgColor);
-	border-radius: var(--roundedCornersRadius);
-	box-shadow: var(--main-dropShadow);
-	overflow: hidden;
-	transform: scale(1);
-	transition: all 0.1s ease-out;
+	border-bottom: 1px dotted var(--color-gray);
+	margin: 0 auto 1.5em;
+	max-width: $screenSize-sm;
+	padding-bottom: 1.5em;
+	text-align: center;
 
-	&:hover {
-		transform: scale(1.02);
+	&:last-child {
+		border: 0;
 	}
 }
 .entrySyndicated_link {
-	display: block;
-	position: relative;
+	color: var(--main-textColor);
 	text-decoration: none;
-}
-.entrySyndicated_featuredPhoto {
-	margin-bottom: var(--entrySyndicated-photoMargin);
-	overflow: hidden;
-}
-.entrySyndicated_featuredPhoto_img {
-	display: block;
-	height: auto;
-	width: 100%;
-}
-.entrySyndicated_content {
-	padding: var(--entrySyndicated-padding);
+	transition: 0.25s all;
+
+	&:hover,
+	&:focus {
+		color: var(--linkColor-active);
+	}
 }
 .entrySyndicated_heading {
-	color: var(--color-brown);
-	font: var(--fontWeight-semibold) 1.25rem/1 var(--fontFamily-sans);
+	margin-bottom: 0.25em;
 }
-.entrySyndicated_location {
-	color: var(--color-grayDark);
-	font: var(--fontWeight-regular) 0.625rem/1 var(--fontFamily-sans);	
+.entrySyndicated_date {
+	color: var(--color-gray);
+	font-size: 0.75em;
+	line-height: 1;
 }

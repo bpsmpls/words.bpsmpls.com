@@ -10,8 +10,8 @@ $screenSize-lg: 60em;
 	// Colors - Grays
 	--color-black:       #000;
 	--color-grayDark:    #333;
-	--color-gray:        #555;
-	--color-grayLight:   #d8d8d8;
+	--color-gray:        #666;
+	--color-grayLight:   #ccc;
 	--color-grayLighter: #e8e8e8;
 	--color-white:       #fff;
 
@@ -43,8 +43,8 @@ $screenSize-lg: 60em;
 	--main-brandColor:  var(--color-violet);
 	--header-bgColor:   var(--color-white);
 
-	--linkColor:        var(--color-grayDark);
-	--linkColor-active: var(--color-violet);
+	--linkColor:        var(--color-red);
+	--linkColor-active: var(--color-red75);
 
 	--window-xPadding:      1em;
 	--entryDetail-padding:  1em;
@@ -54,6 +54,68 @@ $screenSize-lg: 60em;
 
 // Mixins
 // -----------------------
+
+@mixin link-style-decorative() {
+	border-bottom: 1px solid var(--color-red);
+	color: var(--color-black);
+	text-decoration: none;
+	transition: all 0.4s ease;
+	
+	&:hover {
+		background: var(--color-red75);
+		border-color: transparent;
+		color: var(--color-white);
+	}
+}
+
+@mixin link-style-highlighted() {
+	@include link-style-decorative();
+
+	display: inline-block;
+	position: relative;
+	text-decoration: none;
+	transition: 0.3s;
+	transition-delay: 0.1s;
+
+	&:before,
+	&:after {
+		content: ' ';
+		position: absolute;
+		z-index: -1;
+	}
+
+	&:before {
+		border-bottom: 1px solid var(--color-red);
+		left: -0.125em;
+		top: 100%;
+		transition: 0.1s;
+		width: calc(100% + 0.25em);
+	}
+	&:after {
+		height: 1.5em;
+		display: block;
+		left: -0.25em;
+		top: 0;
+		transition: 0.4s;
+		width: 0px;
+		@include clip-path( polygon(2% 0, 100% 0, 98% 100%, 0 100%) );
+	}
+
+	&:hover {
+		background: none;
+		color: var(--color-white);
+
+		&:before {
+			left: -0.25em;
+		}
+
+		&:after {
+			background: var(--color-red75);
+			opacity: 1;
+			width: calc(100% + 0.5em);
+		}
+	}
+}
 
 // Responsive Video
 @mixin flex_video() {

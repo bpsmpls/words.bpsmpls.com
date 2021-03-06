@@ -2,11 +2,13 @@
  # Words syndicated entry
  # ---------------
  # Template for showing a syndicated Words entry
- #} <li id="{{ entry.slug }}" class="wordsSyndicated">
-    <h2 class="wordsSyndicated_heading">
-        <a href="/{{ categorySlug }}/{{ entry.slug}}">
+ #} <li id="{{ entry.slug }}" class="entrySyndicated">
+    <h2 class="entrySyndicated_heading">
+        <a href="/{{ categorySlug }}/{{ entry.slug}}" class="entrySyndicated_link">
         {{ entry.title }}
         </a>
     </h2>
-    <time datetime="Y-m-d H:i">{{ entry.postDate | date("M d, Y") }}</time>
+    <time datetime="Y-m-d H:i" class="entrySyndicated_date">
+        {{ entry.postDate | date("M d, Y") }}
+    </time>
 </li>
