@@ -7,7 +7,10 @@
 body {
 	background-color: var(--main-bgColor);
 	color: var(--main-textColor);
-	font: var(--fontWeight-regular) 1em/1.5 var(--fontFamily-sans);
+	font-family: var(--fontFamily-sans);
+	font-size: var(--main-fontSize);
+	font-weight: var(--fontWeight-regular);
+	line-height: var(--main-lineHeight);
 }
 
 a {

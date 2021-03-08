@@ -16,5 +16,7 @@
 }
 
 .entryDetail_body {
-
+	a {
+		@include link-style-highlighted();
+	}
 }

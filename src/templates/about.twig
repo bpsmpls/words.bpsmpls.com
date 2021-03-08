@@ -6,9 +6,16 @@
 {% set pageID = "about" %}
 
 {% block content %}
-	<h1 class="heading">{{ entry.title }}</h1>
-
-	<div class="description">
-		{{ entry.body }}
-	</div>
+	<article class="entryDetail">
+		<heading class="pageHeader">
+			<h1 class="pageHeader_heading entryDetail_heading">
+				{{ entry.title }}
+			</h1>
+		</heading>
+		{% if entry.body %}
+			<div class="entryDetail_body">
+				{{ entry.body }}
+			</div>
+		{% endif %}
+	</article>
 {% endblock %}

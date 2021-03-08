@@ -38,8 +38,11 @@ $screenSize-lg: 60em;
 	--mastheadHeight: 5em;
 
 	// Main Theme
-	--main-bgColor:     var(--color-grayLighter);
+	--main-bgColor:     var(--color-white);
 	--main-textColor:   var(--color-grayDark);
+	--main-fontSize:    1rem;
+	--main-lineHeight:  1.75rem;
+
 	--main-brandColor:  var(--color-violet);
 	--header-bgColor:   var(--color-white);
 
@@ -72,6 +75,7 @@ $screenSize-lg: 60em;
 	@include link-style-decorative();
 
 	display: inline-block;
+	margin:0;
 	position: relative;
 	text-decoration: none;
 	transition: 0.3s;
@@ -88,15 +92,16 @@ $screenSize-lg: 60em;
 		border-bottom: 1px solid var(--color-red);
 		left: -0.125em;
 		top: 100%;
-		transition: 0.1s;
+		transition: 0.2s;
+		transition-delay: 0.1s;
 		width: calc(100% + 0.25em);
 	}
 	&:after {
-		height: 1.5em;
+		height: var(--main-lineHeight);
 		display: block;
 		left: -0.25em;
 		top: 0;
-		transition: 0.4s;
+		transition: 0.4s all ease;
 		width: 0px;
 		@include clip-path( polygon(2% 0, 100% 0, 98% 100%, 0 100%) );
 	}
@@ -112,7 +117,7 @@ $screenSize-lg: 60em;
 		&:after {
 			background: var(--color-red75);
 			opacity: 1;
-			width: calc(100% + 0.5em);
+			width: calc(100% + 0.375em);
 		}
 	}
 }
