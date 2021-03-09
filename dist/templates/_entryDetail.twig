@@ -2,7 +2,7 @@
  # Words entry
  # ---------------
  # Template for showing a full Words entry
- #} {% extends "_layout" %} {% set pageTitle = entry.title ~ ' by bps' %} {% set description = '' %} {% set categorySlug = craft.app.request.getSegment(1) %} {% set entrySlug = craft.app.request.getSegment(2) %} {% set pageID = categorySlug %} {% block content %} <article class="entryDetail">
+ #} {% extends "_layout" %} {% set pageTitle = entry.title ~ ' by Brandon Patrick Sullivan' %} {% set description = '' %} {% set categorySlug = craft.app.request.getSegment(1) %} {% set entrySlug = craft.app.request.getSegment(2) %} {% set category = craft.categories.slug(categorySlug) %} {% set pageID = categorySlug %} {% block content %} <article class="entryDetail">
     <heading class="pageHeader">
         <h1 class="pageHeader_heading entryDetail_heading">
             {{ entry.title }}
