@@ -2,14 +2,15 @@
 // --------------------------------------------------
 
 #colophon {
-	padding: 2vw 1vw;
+	font-size: 0.75rem;
+	padding: 1em;
+	text-align: center;
 
 	a {
 		color: var(--linkColor);
 	}
 
 	p {
-		margin: 2em 0;
-		text-align: center;
+		margin: 0;
 	}
 }

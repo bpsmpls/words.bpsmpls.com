@@ -1,14 +1,21 @@
 {# default template #}
 
 {% extends "_layout" %}
-{% set pageTitle = 'assorted writing by bps' %}
+{% set pageTitle = 'Assorted writing by Brandon Patrick Sullivan' %}
 {% set description = '' %}
 {% set pageID = "home" %}
 
-{% block content %}	
-	<h1 class="heading"></h1>
-
-	<div class="description">
-		
-	</div>
+{% block content %}
+	<article class="entryDetail">
+		<heading class="pageHeader">
+			<h1 class="pageHeader_heading entryDetail_heading">
+				{{ entry.title }}
+			</h1>
+		</heading>
+		{% if entry.body %}
+			<div class="entryDetail_body">
+				{{ entry.body }}
+			</div>
+		{% endif %}
+	</article>
 {% endblock %}

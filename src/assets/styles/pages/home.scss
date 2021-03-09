@@ -1,2 +1,28 @@
 // Section: Home
 // --------------------
+
+#home {
+	padding-top: 20vh;
+
+	.entryDetail {
+		text-align: center;
+	}
+	.pageHeader {
+		margin: 0;
+	}
+	.entryDetail_heading {
+		font-size: 20vw;
+		margin-bottom: 0;
+		
+		@media (min-width: $screenSize-md) {
+			font-size: 10rem;	
+		}
+	}
+	.entryDetail_body {
+		font-size: 0.9em;
+		
+		p {
+			margin: 0;
+		}
+	}
+}
