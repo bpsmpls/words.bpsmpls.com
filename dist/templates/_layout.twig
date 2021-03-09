@@ -3,5 +3,6 @@
     <head> {% include "components/shared/_head" %} {# {% include "components/scripts/_analytics" %} #} </head>
     <body>
         <div id="page"> {% include "components/shared/_masthead" %} <main id="{{ pageID }}"> {% block content %} {% endblock %} </main>
+        </div> {% block footerNav %} {% endblock %} {% include "components/shared/_colophon" %} {% include "components/scripts/_globalScripts" %}
     </body>
 </html>

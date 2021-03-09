@@ -1,0 +1,40 @@
+// More Entries navigation
+// --------------------------------------------------
+
+.moreEntries {
+	margin: 0 auto 6vw;
+	max-width: $screenSize-md;
+}
+
+.moreEntries_list {
+	display: grid;
+	grid-template-areas: 'prev next';
+	justify-content: space-between;
+}
+.moreEntries_previous,
+.moreEntries_next {
+	max-width: 15em;
+}
+
+.moreEntries_previous {
+	grid-area: prev;
+}
+
+.moreEntries_next {
+	grid-area: next;
+	justify-self: end;
+}
+
+.moreEntries_subhead {
+	display: block;
+	color: var(--color-gray);
+	font-size: 0.75em;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+.moreEntries_link {
+	font-family: var(--fontFamily-serif);
+	font-size: 1.5em;
+
+	@include link-style-decorative();
+}

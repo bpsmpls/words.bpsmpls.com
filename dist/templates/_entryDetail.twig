@@ -13,4 +13,4 @@
     </heading> {% if entry.body %} <div class="entryDetail_body">
         {{ entry.body }}
     </div> {% endif %}
-</article> {% endblock %}
+</article> {% endblock %} {% block footerNav %} {% include '_moreEntries' with { 'category' : category, 'categorySlug' : categorySlug } %} {% endblock %}

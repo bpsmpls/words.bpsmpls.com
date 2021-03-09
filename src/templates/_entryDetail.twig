@@ -9,6 +9,7 @@
 {% set description = '' %}
 {% set categorySlug = craft.app.request.getSegment(1) %}
 {% set entrySlug = craft.app.request.getSegment(2) %}
+{% set category = craft.categories.slug(categorySlug) %}
 {% set pageID = categorySlug %}
 
 {% block content %}
@@ -27,4 +28,8 @@
 			</div>
 		{% endif %}
 	</article>
+{% endblock %}
+
+{% block footerNav %}
+	{% include '_moreEntries' with { 'category' : category, 'categorySlug' : categorySlug } %}
 {% endblock %}
