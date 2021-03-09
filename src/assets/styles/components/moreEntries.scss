@@ -38,7 +38,7 @@
 @media (min-width: $screenSize-md) {
 	.moreEntries_list {
 		display: grid;
-		grid-template-areas: 'prev next';
+		grid-template-areas: 'next prev';
 		justify-content: space-between;
 	}
 	.moreEntries_previous,
@@ -46,9 +46,9 @@
 		max-width: 15em;
 	}
 
-	.moreEntries_previous {}
-
-	.moreEntries_next {
+	.moreEntries_previous {
 		justify-self: end;
 	}
+
+	.moreEntries_next {}
 }
