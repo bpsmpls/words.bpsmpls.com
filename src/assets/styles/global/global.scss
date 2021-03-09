@@ -13,16 +13,7 @@ body {
 	line-height: var(--main-lineHeight);
 }
 
-a {
-	.description & {
-		@include link-style-decorative();
-	}
-}
-
-
-#page {
-	
-}
+a {}
 
 main {
 	min-height:90vh;
@@ -31,10 +22,4 @@ main {
 
 p:last-child {
 	margin: 0;
-}
-
-footer {
-	p {
-		text-align: center;
-	}
 }

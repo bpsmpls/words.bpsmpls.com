@@ -5,14 +5,14 @@
     {% include "components/scripts/_analytics" %}
 </head>
 <body>
-    <div id="page">
-        {% include "components/shared/_masthead" %}
+    <a href="#mainContent" class="u-isVisuallyHidden">Skip to main content</a>
+    
+    {% include "components/shared/_masthead" %}
 
-        <main id="{{ pageID }}">
-            {% block content %}
-            {% endblock %}
-        </main>
-    </div>
+    <main id="mainContent" class="{{ pageID }}">
+        {% block content %}
+        {% endblock %}
+    </main>
 
     {% block footerNav %}
     {% endblock %}
