@@ -1,5 +1,5 @@
 {# Set parameters for prev/next elements list #}
-{% set params = craft.entries.relatedTo(category).order('postDate asc') %}
+{% set params = craft.entries.relatedTo(category).orderBy('postDate asc') %}
 
 {# Get the prev/next elements #}
 {% set prevEntry = entry.getPrev(params) %}

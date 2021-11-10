@@ -1,4 +1,4 @@
-{# Set parameters for prev/next elements list #} {% set params = craft.entries.relatedTo(category).order('postDate asc') %} {# Get the prev/next elements #} {% set prevEntry = entry.getPrev(params) %} {% set nextEntry = entry.getNext(params) %} {% if prevEntry or nextEntry %} <nav class="moreEntries">
+{# Set parameters for prev/next elements list #} {% set params = craft.entries.relatedTo(category).orderBy('postDate asc') %} {# Get the prev/next elements #} {% set prevEntry = entry.getPrev(params) %} {% set nextEntry = entry.getNext(params) %} {% if prevEntry or nextEntry %} <nav class="moreEntries">
     <ul class="moreEntries_list unstyledList"> {# And make sure to only output the links if the element exists #} {% if nextEntry %} <li class="moreEntries_next">
             <span class="moreEntries_subhead">Newer {{ categorySlug|trim('s', 'right') }}: </span>
             <a href="{{ nextEntry.url }}" title="{{ nextEntry.title }}" class="moreEntries_link">
