@@ -1,0 +1,15 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteRule ^([^\.]+)$ $1.html [NC,L]
+	Options +MultiViews
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+</IfModule>

@@ -1,8 +1,0 @@
-{#
- # Category display
- # ---------------
- # Template for showing a groups of categories entries
- #} {% extends "_layout" %} {% set pageTitle = 'assorted writing by bps' %} {% set description = '' %} {% set categorySlug = craft.app.request.getSegment(1) %} {% set category = craft.categories.slug(categorySlug) %} {% set pageID = categorySlug %} {% block content %} <header class="sectionHeader">
-    <h2 class="sectionHeader_subheading">Work</h2>
-    <h1 class="sectionHeader_heading">{{ categorySlug }}</h1>
-</header> {% set entries = craft.entries.section('words').relatedTo(category).all() %} {% if entries|length %} <ul id="entryDirectory"> {% for entry in entries %} {% include '_entrySyndicated' with { 'categorySlug' : categorySlug } %} {% endfor %} </ul> {% endif %} </ul> {% endblock %}
